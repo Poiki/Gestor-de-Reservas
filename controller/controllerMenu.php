@@ -17,7 +17,7 @@ class ControllerMenu
     }
 
     /**
-     * Muestra el formulario de menu
+     * Muestra el formulario del menu
      */
     public function showMenu()
     {
