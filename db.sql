@@ -37,9 +37,9 @@ CREATE TABLE reservation (
 );
 
 INSERT INTO resource VALUES 
-(1, 'Impresora HP', 'Impresora laser', 'Departamento Informática', 'ImpresoraHP.jpg'),
-(2, 'Portátil HP', 'Portatil HP  Negro', 'Aula Tic', 'PortatilHP.jpg'), 
-(3, 'Portatil Acer', 'Portatil Acer Gris', 'Aula 8', 'PortatilAcer.jpg');
+(1, 'Impresora HP', 'Impresora laser', 'Departamento Informática', 'impresorahp.jpg'),
+(2, 'Portátil HP', 'Portatil HP  Negro', 'Aula Tic', 'portatilhp.jpg'), 
+(3, 'Portatil Acer', 'Portatil Acer Gris', 'Aula 8', 'portatilacer.jpg');
 
 INSERT INTO user VALUES 
 (1, 'antonio', 'antonio1234', 'Antonio'), 

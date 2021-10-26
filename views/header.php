@@ -10,13 +10,11 @@
 
 <body>
     <header class="modal-header">
-<<<<<<< HEAD
-        <ul>
-            < class="navbar" style="list-style:none;">
-                <li><a href="index.php" class="navbar-text" style="padding-right: 2em;">Inicio</a></li>
-                <li><a href="index.php?action=showAllResources&controller=controllerResource" class="navbar-text" style="padding-right: 2em;">Recursos</a></li>
-                <li><a href="index.php?action=showAllTimeSlots&controller=controllerTimeSlot" class="navbar-text" style="padding-right: 2em;">Horario</a></li>
-                <li><a href="index.php?action=showAllUsers&controller=controllerUser" class="navbar-text" style="padding-right: 2em;">Usuarios</a></li>
+        <ul class="navbar" style="list-style:none;">
+            <li><a href="index.php" class="navbar-text" style="padding-right: 2em;">Inicio</a></li>
+            <li><a href="index.php?action=showAllResources&controller=controllerResource" class="navbar-text" style="padding-right: 2em;">Recursos</a></li>
+            <li><a href="index.php?action=showAllTimeSlots&controller=controllerTimeSlot" class="navbar-text" style="padding-right: 2em;">Horario</a></li>
+            <li><a href="index.php?action=showAllUsers&controller=controllerUser" class="navbar-text" style="padding-right: 2em;">Usuarios</a></li>
         </ul>
         <div class="">
             <button type="button" class="">Login</button>

@@ -38,8 +38,8 @@ class Resource
         // Se comprueba que existe el id
         if (count($consulta) > 0) {
             $nombre_img = $consulta[0]['img'];
-            $dir_subida = 'C:\xampp\htdocs\DWES-Actividades\Tema 4\assets\images\resources';
-            $fichero_subido = $dir_subida . '\\' . $nombre_img;
+            $dir_subida = 'C:\xampp\htdocs\DWES\Gestor-de-Reservas\assets\images\resources';
+            $file_uploaded = $dir_subida . '\\' . $nombre_img;
 
             // Se ejecuta el borrado de la fila con el id indicado
             $delete = DB::dataManipulation("DELETE FROM resource WHERE id = '$idResource'");
@@ -47,7 +47,7 @@ class Resource
             // Si la eliminación de la fila ha funcionado se elimina la imagen
             if ($delete != 0) {
                 // Si se ha eliminado la fotografía se manda una variable indicado que ha funcionado
-                if (unlink($fichero_subido)) {
+                if (unlink($file_uploaded)) {
                     $info = 'ok_b';
                 } else {
                     $info = 'errorFile';
@@ -69,7 +69,6 @@ class Resource
 
         // Se comprueba que existe el id
         if (count($consulta) > 0) {
-            print_r($data[4]);
             $img_name_old = $consulta[0]['img'];
             $img_name_new = '';
             
@@ -79,11 +78,11 @@ class Resource
                 $img_name_new = "";
             }
             
-            $dir_subida = 'C:\xampp\htdocs\DWES-Actividades\Tema 4\assets\images\resources';
-            $fichero_subido_old = $dir_subida . '\\' . $img_name_old;
-            $fichero_subido_new = $dir_subida . '\\' . $img_name_new;
+            $dir_subida = 'C:\xampp\htdocs\DWES\Gestor-de-Reservas\assets\images\resources';
+            $file_uploaded_old = $dir_subida . '\\' . $img_name_old;
+            $file_uploaded_new = $dir_subida . '\\' . $img_name_new;
 
-            $modify;
+            $modify = null;
             if ($img_name_new == "") {
                 // Se ejecuta el modificado de la fila sin fotografía con el id indicado
                 $modify = DB::dataManipulation("UPDATE resource SET
@@ -104,10 +103,10 @@ class Resource
             // Si la modificación de la fila ha funcionado se elimina la imagen
             if ($modify != 0 && $img_name_new != "") {
                 // Si se ha eliminado la fotografía se añade la nueva imagen
-                $delete = unlink($fichero_subido_old);
+                $delete = unlink($file_uploaded_old);
                 if ($delete && $img_name_old != $img_name_new) {
                     // Si las dos fotografias tienen nombres diferentes se sube el nuevo
-                    if (move_uploaded_file($data[4], $fichero_subido_new)) {
+                    if (move_uploaded_file($data[4], $file_uploaded_new)) {
                         $info = 'ok_m';
                     } else {
                         $info = 'errorFile';
