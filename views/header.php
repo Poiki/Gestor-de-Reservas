@@ -10,6 +10,7 @@
 
 <body>
     <header class="modal-header">
+<<<<<<< HEAD
         <ul>
             < class="navbar" style="list-style:none;">
                 <li><a href="index.php" class="navbar-text" style="padding-right: 2em;">Inicio</a></li>
