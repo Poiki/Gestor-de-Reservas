@@ -10,7 +10,7 @@
 
 <body>
     <header class="modal-header">
-        <ul class="navbar" style="list-style:none;">
+        <ul class="navbar" style="list-style:none;"></ul>
             <li><a href="index.php" class="navbar-text" style="padding-right: 2em;">Inicio</a></li>
             <li><a href="index.php?action=showAllResources&controller=controllerResource" class="navbar-text" style="padding-right: 2em;">Recursos</a></li>
             <li><a href="index.php?action=showAllTimeSlots&controller=controllerTimeSlot" class="navbar-text" style="padding-right: 2em;">Horario</a></li>
