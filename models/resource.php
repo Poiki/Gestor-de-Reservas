@@ -37,9 +37,9 @@ class Resource
 
         // Se comprueba que existe el id
         if (count($consulta) > 0) {
-            $nombre_img = $consulta[0]['img'];
+            $img_name = $consulta[0]['img'];
             $dir_subida = 'C:\xampp\htdocs\DWES\Gestor-de-Reservas\assets\images\resources';
-            $file_uploaded = $dir_subida . '\\' . $nombre_img;
+            $file_uploaded = $dir_subida . '\\' . $img_name;
 
             // Se ejecuta el borrado de la fila con el id indicado
             $delete = DB::dataManipulation("DELETE FROM resource WHERE id = '$idResource'");
@@ -48,7 +48,7 @@ class Resource
             if ($delete != 0) {
                 // Si se ha eliminado la fotografía se manda una variable indicado que ha funcionado
                 if (unlink($file_uploaded)) {
-                    $info = 'ok_b';
+                    $info = 'ok_d';
                 } else {
                     $info = 'errorFile';
                 }
@@ -131,4 +131,28 @@ class Resource
             return null;
     }
 
+    public function createResource($data)
+    {
+        // Variable info para mandar el resultado
+        $info='';
+
+        $img_name = str_replace(' ', '_', strtolower($data[0]) . '.jpg');
+        $dir_subida = 'C:\xampp\htdocs\DWES\Gestor-de-Reservas\assets\images\resources';
+        $file_uploaded = $dir_subida . '\\' . $img_name;
+
+
+        $consulta = DB::dataManipulation("INSERT INTO resource(name, description, location, img) VALUES ('$data[0]', '$data[1]', '$data[2]', '$img_name');");
+
+        if ($consulta != 0) {
+            if (move_uploaded_file($data[3], $file_uploaded)) {
+                $info = 'ok_c';
+            } else {
+                $info = 'errorFile';
+            }
+        } else {
+            $info = 'errorRow';
+        }
+
+        return $info;
+    }
 }

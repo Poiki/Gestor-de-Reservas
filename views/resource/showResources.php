@@ -5,13 +5,15 @@
     $msg = $data[3];
 
     if ($msg == "errorRow") {
-        echo "<p style='color:red'>Error. No se ha podido eliminar la row.</p>";
+        echo "<p style='color:red'>Error al realizar la consulta.</p>";
     } else if ($msg == "errorFile") {
-        echo "<p style='color:red'>Error. Se ha eliminado todos los datos excepto la fotografía.</p>";
-    } else if ($msg == "ok_b") {
+        echo "<p style='color:red'>Error relacionado con el fichero.</p>";
+    } else if ($msg == "ok_d") {
         echo "<p style='color:green'>El recurso se ha eliminado correctamente.</p>";
     } else if ($msg == "ok_m") {
-        echo "<p style='color:green'>El recurso se ha eliminado correctamente.</p>";
+        echo "<p style='color:green'>El recurso se ha modificado correctamente.</p>";
+    } elseif ($msg == "ok_c") {
+        echo "<p style='color:green'>El recurso se ha creado correctamente.</p>";
     }
 
     echo "</div>";
@@ -44,4 +46,3 @@
         echo "</tr>";
     }
     echo "</table>";
-    echo "<script type='text/javascript' src='js/app.js'></script>";
