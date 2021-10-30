@@ -4,7 +4,7 @@ $consulta = $data[2][0];
 echo "<h1>Modificación de recurso</h1>";
 
 // Formulario con los datos del recurso que se quiere modificar
-echo "<form enctype='multipart/form-data' action='index.php?action=modificarResource&controller=controllerResource' method='POST'>
+echo "<form enctype='multipart/form-data' action='index.php?action=modifyResource&controller=controllerResource' method='POST'>
         <input type='hidden' name='idResource' value='" . $consulta['id'] . "'>
         <label for='name'>Nombre:</label>
         <input type='text' name='name' value='" . $consulta['name'] . "'><br>

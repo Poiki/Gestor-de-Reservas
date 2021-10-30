@@ -1,6 +1,7 @@
-    </div>
-    <div class='modal-footer'>
-        <a href="index.php">Volver al menú</a>
+    <div>
+        <br>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='index.php'">Volver al menú</button>
+
     </div>
 
     </body>

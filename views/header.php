@@ -10,14 +10,35 @@
 
 <body>
     <header class="modal-header">
-        <ul class="navbar" style="list-style:none;">
-            <li><a href="index.php" class="navbar-text" style="padding-right: 2em;">Inicio</a></li>
-            <li><a href="index.php?action=showAllResources&controller=controllerResource" class="navbar-text" style="padding-right: 2em;">Recursos</a></li>
-            <li><a href="index.php?action=showAllTimeSlots&controller=controllerTimeSlot" class="navbar-text" style="padding-right: 2em;">Horario</a></li>
-            <li><a href="index.php?action=showAllUsers&controller=controllerUser" class="navbar-text" style="padding-right: 2em;">Usuarios</a></li>
-        </ul>
-        <div class="">
-            <button type="button" class="">Login</button>
-            <button type="button" class="">Sign-up</button>
+        <div class="bs-component">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.php">Inicio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.php?action=showAllResources&controller=controllerResource">Recursos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.php?action=showAllTimeSlots&controller=controllerTimeSlot">Horario</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.php?action=showAllUsers&controller=controllerUser">Usuarios</a>
+                            </li>
+                    </div>
+                    </ul>
+                </div>
         </div>
+        </nav>
+        </div>
+        <div>
+            <br>
+            <button type="button" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-primary">Sign-up</button>
+        </div>
+
+
     </header>

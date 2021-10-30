@@ -2,7 +2,7 @@
 echo "<h1>Creación de usuario</h1>";
 
 // Formulario para introducir recursos
-echo "<form enctype='multipart/form-data' action='index.php?action=createUser&controller=controllerUser' method='POST'>
+echo "<form enctype='multipart/form-data' action='index.php?action=createResource&controller=controllerResource' method='POST'>
         <label for='name'>Nombre:</label>
         <input type='text' name='name' value=''><br>
          <label for='description'>Descripción:</label><br /><textarea name='description' rows='6' cols='70'></textarea><br>
@@ -11,6 +11,4 @@ echo "<form enctype='multipart/form-data' action='index.php?action=createUser&co
 
 
 // Finalizamos el formulario
-echo " <input type='submit'>
-    </form>";
-echo "<p><a href='index.php?action=showAllUsers&controller=controllerUser'>Volver a Users</a></p>";
+echo " <input type='submit'> </form>";

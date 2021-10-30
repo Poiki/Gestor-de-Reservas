@@ -39,15 +39,15 @@ class ControllerResource
         $msg = $this->resource->deleteId($_REQUEST['idResource']);
         $this->showAllResources($msg);
     }
-
-    public function modificarResource()
+    // Recoge la infromacion del formulario y la envia al modelo.
+    public function modifyResource()
     {
         $dataModify = array($_REQUEST['idResource'], $_REQUEST['name'], $_REQUEST['description'], $_REQUEST['location'], $_FILES['img']['tmp_name']);
 
         $msg = $this->resource->modifyResource($dataModify);
         $this->showAllResources($msg);
     }
-    
+    // Muestra el formulario
     public function formularioModificarResource()
     {
         $query = $this->resource->queryResource($_REQUEST['idResource']);
@@ -57,5 +57,20 @@ class ControllerResource
             $data = array('formModifyResource', 'resource', $query);
             $this->view->show($data);
         }
+    }
+     // Muestra el formulario
+    public function formularioCrearResource()
+    {
+
+        $data = array('formCreateResource', 'resource');
+        $this->view->show($data);
+    }
+    // Recoge la infromacion del formulario y la envia al modelo.
+    public function createResource()
+    {
+        $dataCreation = array($_REQUEST['name'], $_REQUEST['description'], $_REQUEST['location'], $_FILES['img']['tmp_name']);
+
+        $msg = $this->resource->createResource($dataCreation);
+        $this->showAllResources($msg);
     }
 }

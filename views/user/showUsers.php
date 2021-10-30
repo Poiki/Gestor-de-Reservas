@@ -38,3 +38,4 @@ foreach ($query as $row) {
     echo "</tr>";
 }
 echo "</table>";
+echo "<button class='btn btn-primary' onclick=\"window.location.href='index.php?action=formularioCrearResource&controller=controllerResource';\">Agregar</button>";

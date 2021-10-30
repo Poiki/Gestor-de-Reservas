@@ -25,7 +25,7 @@
     </form><br>";
 
     // Ahora, la tabla con los datos de las películas
-    echo "<table border='1' class='table table-striped'>
+    echo "<table border='1' class='table'>
     <tr>
     <th scope='col'>Nombre</th>
     <th scope='col'>Descripción</th>
@@ -46,3 +46,4 @@
         echo "</tr>";
     }
     echo "</table>";
+    echo "<button class='btn btn-primary' onclick=\"window.location.href='index.php?action=formularioCrearResource&controller=controllerResource';\">Agregar</button>";
