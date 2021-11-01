@@ -48,9 +48,9 @@ INSERT INTO user VALUES
 (4, 'user', 'admin', 'Admin');
 
 INSERT INTO timeslot VALUES 
-(1, 'Lunes', '13:05:00', '14:35:00'), 
-(2, 'Miercoles', '9:05:00', '10:05:00'), 
-(3, 'Viernes', '10:05:00', '11:00:00');
+(1, '2021-11-02', '13:05', '14:35'), 
+(2, '2021-11-04', '9:05', '10:05'), 
+(3, '2021-11-09', '10:05', '11:00');
 
 INSERT INTO reservation VALUES 
 (1, 2, 4, 1, '15-10-2021', 'Dar clase'),

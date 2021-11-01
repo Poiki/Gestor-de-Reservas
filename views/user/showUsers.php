@@ -33,9 +33,9 @@ foreach ($query as $row) {
     echo "<td>" . $row['username'] . "</td>";
     echo "<td>" . $row['password'] . "</td>";
     echo "<td>" . $row['realname'] . "</td>";
-    echo "<td><a href='index.php?action=formularioModificarUser&idUser=" . $row['id'] . "'>Modificar</a></td>";
-    echo "<td><a href='index.php?action=borrarUser&idUser=" . $row['id'] . "'>Borrar</a></td>";
+    echo "<td><a href='index.php?action=formularioModifyUser&controller=controllerUser&id=" . $row['id'] . "'>Modificar</a></td>";
+    echo "<td><a href='index.php?action=deleteUser&controller=controllerUser&id=" . $row['id'] . "'>Borrar</a></td>";
     echo "</tr>";
 }
 echo "</table>";
-echo "<button class='btn btn-primary' onclick=\"window.location.href='index.php?action=formularioCrearResource&controller=controllerResource';\">Agregar</button>";
+echo "<button class='btn btn-primary' onclick=\"window.location.href='index.php?action=formCreateUser&controller=controllerUser';\">Agregar</button>";

@@ -31,8 +31,8 @@ foreach ($query as $row) {
     echo "<td>" . $row['day_of_week'] . "</td>";
     echo "<td>" . $row['start_time'] . "</td>";
     echo "<td>" . $row['end_time'] . "</td>";
-    echo "<td><a href='index.php?action=formularioModificarTimeSlot&idTimeSlot=" . $row['id'] . "'>Modificar</a></td>";
-    echo "<td><a href='index.php?action=borrarTimeSlot&idTimeSlot=" . $row['id'] . "'>Borrar</a></td>";
+    echo "<td><a href='index.php?action=formularioModifyTimeSlot&controller=controllerTimeSlot&id=" . $row['id'] . "'>Modificar</a></td>";
+    echo "<td><a href='index.php?action=borrarTimeSlot&controller=controllerTimeSlot&id=" . $row['id'] . "'>Borrar</a></td>";
     echo "</tr>";
 }
 echo "</table>";
