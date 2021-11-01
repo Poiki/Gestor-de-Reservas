@@ -67,4 +67,14 @@ class User
         }
         return $info;
     }
+    // Verifica si exsite el usuario
+    public function checkInfo($user, $password)
+    {
+        $reply = DB::dataQuery("SELECT * FROM user WHERE username= '$user' AND password = '$password'");
+        if ($reply != null) {
+            return $reply[0];
+        } else {
+            return null;
+        }
+    }
 }

@@ -1,9 +1,9 @@
 <?php
 
-require("views/view.php");
-require("models/resource.php");
-// include ("models/user.php");
-// include ("models/security.php");
+include_once("views/view.php");
+include_once("models/resource.php");
+// include_once ("models/user.php");
+// include_once ("models/security.php");
 
 class ControllerResource
 {
@@ -15,7 +15,6 @@ class ControllerResource
      */
     public function __construct()
     {
-        session_start(); // Si no se ha hecho en el index, claro
         $this->view = new View(); // Vistas
         $this->resource = new Resource(); // Modelo de usuarios
     }

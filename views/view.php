@@ -8,7 +8,7 @@ class View
 		$folder = $data[1];
 
 		include("views/header.php");
-		if ($data) {
+		if ($data[1]) {
 			include("views/$folder/$viewName.php");
 		} else {
 			include("views/$viewName.php");

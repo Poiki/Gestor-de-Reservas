@@ -1,6 +1,6 @@
 <?php
 
-require("views/view.php");
+include_once("views/view.php");
 
 class ControllerMenu
 {
@@ -12,16 +12,21 @@ class ControllerMenu
      */
     public function __construct()
     {
-        session_start();
         $this->view = new View();
     }
 
     /**
      * Muestra el formulario del menu
      */
-    public function showMenu()
+    public function showMenu($msg = null)
     {
         $data = array('showMenu', null);
+        $this->view->show($data);
+    }
+    // Muestra el formulario de login
+    public function showLogin()
+    {
+        $data = array('showLogin', null);
         $this->view->show($data);
     }
 }

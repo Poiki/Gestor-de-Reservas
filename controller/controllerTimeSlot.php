@@ -1,9 +1,9 @@
 <?php
 
-require("views/view.php");
-require("models/timeSlot.php");
-// require ("models/user.php");
-// require ("models/security.php");
+include_once("views/view.php");
+include_once("models/timeSlot.php");
+// include_once ("models/user.php");
+// include_once ("models/security.php");
 
 class ControllerTimeSlot
 {
@@ -15,7 +15,6 @@ class ControllerTimeSlot
      */
     public function __construct()
     {
-        session_start();
         $this->view = new View();
         $this->timeSlot = new TimeSlot();
     }

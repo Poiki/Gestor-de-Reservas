@@ -36,8 +36,15 @@
         </div>
         <div>
             <br>
-            <button type="button" class="btn btn-primary">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
+            <?php
+            if (Security::thereIsSession()) {
+                echo "<p>Id del usuario: ". Security::getUserId() ."</p>";
+                echo "<button type='button' class='btn btn-primary' onclick=\"window.location.href='index.php?action=closeSession&controller=controllerUser';\">Cerrar sesión</button>";
+            }
+            else {
+                echo "<button type='button' class='btn btn-primary' onclick=\"window.location.href='index.php?action=showLogin';\">Login</button>";
+            }
+            ?>
         </div>
 
 
