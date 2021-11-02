@@ -59,7 +59,6 @@ class ControllerTimeSlot
     // Muestra el formulario
     public function formularioCrearTimeSlot()
     {
-
         $data = array('formCreatetimeSlot', 'timeSlot');
         $this->view->show($data);
     }

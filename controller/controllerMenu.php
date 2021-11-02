@@ -26,7 +26,7 @@ class ControllerMenu
     // Muestra el formulario de login
     public function showLogin()
     {
-        $data = array('showLogin', null);
+        $data = array('showLogin', null, null, null);
         $this->view->show($data);
     }
 }

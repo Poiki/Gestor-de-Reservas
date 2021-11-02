@@ -3,7 +3,7 @@ $msg = $data[3];
 
 if ($msg == "error_Lgn") {
         echo "<p style='color:red'>Error al iniciar sesión</p>";}
-// Formulario para introducir recursos
+// Formulario para introducir llos datos de usuario
 echo "<form enctype='multipart/form-data' action='index.php?action=loginProcessor&controller=controllerUser' method='POST'>
         <label>Username</label>
         <input type='text' name='username' class='form-control' pattern='[a-zA-Z0-9]+' placeholder='Escriba aqui...' required />

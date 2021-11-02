@@ -28,6 +28,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="index.php?action=showAllUsers&controller=controllerUser">Usuarios</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.php?action=showAllReserves&controller=controllerReserve">Reservas</a>
+                            </li>
                     </div>
                     </ul>
                 </div>
@@ -38,10 +41,9 @@
             <br>
             <?php
             if (Security::thereIsSession()) {
-                echo "<p>Id del usuario: ". Security::getUserId() ."</p>";
+                echo "<p>Id del usuario: " . Security::getUserId() . "</p>";
                 echo "<button type='button' class='btn btn-primary' onclick=\"window.location.href='index.php?action=closeSession&controller=controllerUser';\">Cerrar sesión</button>";
-            }
-            else {
+            } else {
                 echo "<button type='button' class='btn btn-primary' onclick=\"window.location.href='index.php?action=showLogin';\">Login</button>";
             }
             ?>

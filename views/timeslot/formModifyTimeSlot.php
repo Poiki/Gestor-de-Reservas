@@ -14,4 +14,4 @@ echo "<form enctype='multipart/form-data' action='index.php?action=modifyTimeSlo
 // Finalizamos el formulario
 echo " <input type='submit'>
     </form>";
-echo "<p><a href='index.php?action=showTimeSlots&controller=controllerTimeSlot'>Volver a Time Slot</a></p>";
+echo "<p><a href='index.php?action=showAllTimeSlots&controller=controllerTimeSlot'>Volver a Time Slot</a></p>";

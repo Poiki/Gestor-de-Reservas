@@ -20,7 +20,7 @@ class ControllerResource
     }
 
     /**
-     * Muestra el formulario de resource
+     * Muestra la información de resource
      */
     public function showAllResources($msg = null)
     {

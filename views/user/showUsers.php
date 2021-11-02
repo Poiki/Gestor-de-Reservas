@@ -18,7 +18,7 @@ echo "<form action='index.php'>
     <input type='submit' value='Buscar'>
     </form><br>";
 
-// Ahora, la tabla con los datos de las películas
+// Ahora, la tabla con los datos de los usuarios
 echo "<table border ='1' class='table table-striped'>
     <tr>
     <th scope='col'>Usuario</th>

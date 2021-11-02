@@ -59,7 +59,8 @@ class TimeSlot
     {
         // Variable info para mandar el resultado
         $info = '';
-        $consulta = DB::dataManipulation("INSERT INTO timeslot(day_of_week, start_time, end_time, img) VALUES ('$data[0]', '$data[1]', '$data[2]');");
+        $consulta = DB::dataManipulation("INSERT INTO timeslot(day_of_week, start_time, end_time) VALUES ('$data[0]', '$data[1]', '$data[2]');");
+        print_r($consulta);
         if ($consulta != 0) {
             $info = 'ok_m';
         } else {

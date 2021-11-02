@@ -32,8 +32,8 @@ foreach ($query as $row) {
     echo "<td>" . $row['start_time'] . "</td>";
     echo "<td>" . $row['end_time'] . "</td>";
     echo "<td><a href='index.php?action=formularioModifyTimeSlot&controller=controllerTimeSlot&id=" . $row['id'] . "'>Modificar</a></td>";
-    echo "<td><a href='index.php?action=borrarTimeSlot&controller=controllerTimeSlot&id=" . $row['id'] . "'>Borrar</a></td>";
+    echo "<td><a href='index.php?action=deleteTimeSlot&controller=controllerTimeSlot&id=" . $row['id'] . "'>Borrar</a></td>";
     echo "</tr>";
 }
 echo "</table>";
-echo "<button class='btn btn-primary' onclick=\"window.location.href='index.php?action=formularioCrearResource&controller=controllerResource';\">Agregar</button>";
+echo "<button class='btn btn-primary' onclick=\"window.location.href='index.php?action=formularioCrearTimeSlot&controller=controllerTimeSlot';\">Agregar</button>";

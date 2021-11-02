@@ -24,13 +24,12 @@ CREATE TABLE timeslot (
     end_time TIME NOT NULL
 );
 
-CREATE TABLE reservation (
+CREATE TABLE reserves(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     id_resource INT UNSIGNED NOT NULL,
     id_user INT UNSIGNED NOT NULL,
     id_timeslot INT UNSIGNED NOT NULL,
-    date DATE NOT NULL,
-    remark VARCHAR(5000),
+    note VARCHAR(5000),
     FOREIGN KEY (id_resource) REFERENCES resource(id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (id_user) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (id_timeslot) REFERENCES timeslot(id) ON DELETE CASCADE ON UPDATE CASCADE
@@ -39,7 +38,9 @@ CREATE TABLE reservation (
 INSERT INTO resource VALUES 
 (1, 'Impresora HP', 'Impresora laser', 'Departamento Informática', 'impresorahp.jpg'),
 (2, 'Portátil HP', 'Portatil HP  Negro', 'Aula Tic', 'portatilhp.jpg'), 
-(3, 'Portatil Acer', 'Portatil Acer Gris', 'Aula 8', 'portatilacer.jpg');
+(3, 'Portatil Acer', 'Portatil Acer Gris', 'Aula 8', 'portatilacer.jpg'),
+(4, 'TV Samsung', 'TV Samsung', 'Aula 7', 'tv.jpg'),
+(5, 'Proyector laser xiaomi', 'Proyector Laser xiaomi', 'Aula 8', 'proyectorlaserxiaomi.jpg');
 
 INSERT INTO user VALUES 
 (1, 'antonio', 'antonio1234', 'Antonio'), 
@@ -50,9 +51,16 @@ INSERT INTO user VALUES
 INSERT INTO timeslot VALUES 
 (1, '2021-11-02', '13:05', '14:35'), 
 (2, '2021-11-04', '9:05', '10:05'), 
-(3, '2021-11-09', '10:05', '11:00');
+(3, '2021-11-09', '10:05', '11:00'),
+(4, '2021-11-01', '11:25', '11:55'),
+(5, '2021-11-19', '09:35', '11:00'),
+(6, '2021-11-29', '08:55', '11:00'),
+(7, '2021-11-28', '08:05', '11:00'),
+(8, '2021-11-30', '10:45', '11:00'),
+(9, '2021-11-04', '10:25', '11:35'),
+(10, '2021-11-05', '10:15', '11:00');
 
-INSERT INTO reservation VALUES 
-(1, 2, 4, 1, '15-10-2021', 'Dar clase'),
-(2, 3, 3, 2, '14-10-2021', 'Tiempo de estudio libre en biblioteca'),
-(3, 1, 1, 3, '15-10-2021', 'Imprimir actividades');
+INSERT INTO reserves VALUES 
+(1, 2, 4, 1, 'Dar clase'),
+(2, 3, 3, 2, 'Tiempo de estudio libre en biblioteca'),
+(3, 1, 1, 3, 'Imprimir actividades');
